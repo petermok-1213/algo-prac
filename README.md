@@ -1,6 +1,6 @@
-# algo-prac
+# What is this
 
-I'm learning algorithms right now. I'm looking for jobs right now.
-I need to implement algos to solodify my knowledge. I need to show ppl that I code.
+I'm learning algorithms and looking for jobs right now. \
+I need to implement algos to solodify my knowledge and show ppl that I can code.
 
 So here it is.
