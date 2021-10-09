@@ -28,8 +28,18 @@ class PriorityQueue():
         else:
             return -1
 
+    # modify the weight at the key, raise exception if key not found
+    def update(self, key: int, weight: int) -> None:
+        for i in range(len(self.queue)):
+            if self.queue[i][0] == key:
+                self.queue[i] = (key, weight)
+            return
+        raise KeyError("Key not found in queue")   # somehow this doesnt work?
+
+
 if __name__ == "__main__":
 
+    # testing the insert and pop method
     Q = PriorityQueue()
     Q.insert(1, 10)
     Q.insert(2, 5)
@@ -37,3 +47,11 @@ if __name__ == "__main__":
     print(Q.pop() == 2)
     print(Q.pop() == 1)
     print(Q.pop() == -1)
+
+    # testing the update method
+    Q = PriorityQueue()
+    Q.insert(5, 10)
+    Q.update(5, 8)
+    print(Q.queue[0][1] == 8)
+    print(Q.update(6, 10))
+    print(Q.queue[0][1])
